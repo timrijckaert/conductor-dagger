@@ -16,4 +16,8 @@ public abstract class ConductorInjectionModule {
 
   @Multibinds
   abstract Map<Class<? extends Controller>, AndroidInjector.Factory<? extends Controller>> controllerInjectorFactories();
+
+  @Multibinds
+  abstract Map<String, AndroidInjector.Factory<? extends Controller>>
+  controllerInjectorFactoriesWithStringKeys();
 }
